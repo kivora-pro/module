@@ -1,0 +1,66 @@
+@import 'tailwindcss';
+
+@theme {
+	/* Brand */
+	--color-brand: #3b82f6;
+	--color-brand-50: #eff6ff;
+	--color-brand-100: #dbeafe;
+	--color-brand-200: #bfdbfe;
+	--color-brand-300: #93c5fd;
+	--color-brand-400: #60a5fa;
+	--color-brand-500: #3b82f6;
+	--color-brand-600: #2563eb;
+	--color-brand-700: #1d4ed8;
+	--color-brand-800: #1e40af;
+	--color-brand-900: #1e3a8a;
+
+	/* Surface */
+	--color-surface: #ffffff;
+	--color-surface-elevated: #ffffff;
+	--color-on-surface: #0f172a;
+
+	/* Neutral */
+	--color-muted: #94a3b8;
+	--color-border: #e2e8f0;
+
+	/* Semantic */
+	--color-success: #22c55e;
+	--color-warning: #f59e0b;
+	--color-danger: #ef4444;
+	--color-danger-400: #f87171;
+	--color-danger-600: #dc2626;
+	--color-warning-400: #fbbf24;
+	--color-warning-600: #d97706;
+	--color-success-400: #4ade80;
+	--color-success-600: #16a34a;
+
+	/* Typography */
+	--font-sans: Inter, system-ui, -apple-system, sans-serif;
+}
+
+body {
+	background-color: var(--color-surface);
+	color: var(--color-on-surface);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* ---- Dark mode overrides ---- */
+/* html.dark es más específico que :root → siempre gana al token de @theme */
+html.dark {
+	--color-surface: #0b1120;
+	--color-surface-elevated: #1e293b;
+	--color-on-surface: #f1f5f9;
+	--color-muted: #94a3b8;
+	--color-border: #334155;
+}
+
+@media (prefers-color-scheme: dark) {
+	html:not(.light) {
+		--color-surface: #0b1120;
+		--color-surface-elevated: #1e293b;
+		--color-on-surface: #f1f5f9;
+		--color-muted: #94a3b8;
+		--color-border: #334155;
+	}
+}
