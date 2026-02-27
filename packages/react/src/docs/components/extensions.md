@@ -20,7 +20,10 @@ export default function Layout({ children }) {
 		<html>
 			<body>
 				{children}
-				<Toaster richColors position="bottom-right" />
+				<Toaster
+					richColors
+					position='bottom-right'
+				/>
 			</body>
 		</html>
 	);
@@ -31,15 +34,15 @@ export default function Layout({ children }) {
 
 Extiende todas las props de Sonner. Las más relevantes:
 
-| Prop            | Tipo                                                                                                | Por defecto      | Descripción                               |
-| --------------- | --------------------------------------------------------------------------------------------------- | ---------------- | ----------------------------------------- |
+| Prop            | Tipo                                                                                              | Por defecto      | Descripción                               |
+| --------------- | ------------------------------------------------------------------------------------------------- | ---------------- | ----------------------------------------- |
 | `position`      | `'top-left' \| 'top-center' \| 'top-right' \| 'bottom-left' \| 'bottom-center' \| 'bottom-right'` | `'bottom-right'` | Posición del stack en pantalla            |
-| `visibleToasts` | `number`                                                                                            | `3`              | Máximo de toasts visibles simultáneamente |
-| `richColors`    | `boolean`                                                                                           | `false`          | Colores semánticos por variante           |
-| `expand`        | `boolean`                                                                                           | `false`          | Expande todos los toasts visibles         |
-| `duration`      | `number`                                                                                            | `4000`           | Duración en ms antes de auto-cerrar       |
-| `closeButton`   | `boolean`                                                                                           | `false`          | Botón de cerrar en cada toast            |
-| `theme`         | `'light' \| 'dark' \| 'system'`                                                                    | `'system'`       | Tema del toast                            |
+| `visibleToasts` | `number`                                                                                          | `3`              | Máximo de toasts visibles simultáneamente |
+| `richColors`    | `boolean`                                                                                         | `false`          | Colores semánticos por variante           |
+| `expand`        | `boolean`                                                                                         | `false`          | Expande todos los toasts visibles         |
+| `duration`      | `number`                                                                                          | `4000`           | Duración en ms antes de auto-cerrar       |
+| `closeButton`   | `boolean`                                                                                         | `false`          | Botón de cerrar en cada toast             |
+| `theme`         | `'light' \| 'dark' \| 'system'`                                                                   | `'system'`       | Tema del toast                            |
 
 ### API imperativa (`toast`)
 
