@@ -1,0 +1,35 @@
+{
+	"name": "@kivora/vite",
+	"version": "0.0.0",
+	"description": "Kivora — Vite plugin and utilities (WIP)",
+	"type": "module",
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js",
+			"require": "./dist/index.cjs"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsup",
+		"dev": "tsup --watch",
+		"type-check": "tsc --noEmit",
+		"clean": "rimraf dist"
+	},
+	"peerDependencies": {
+		"vite": ">=5"
+	},
+	"devDependencies": {
+		"@kivora/core": "workspace:*",
+		"rimraf": "^6.0.1",
+		"tsup": "^8.3.5",
+		"typescript": "^5.7.3",
+		"vite": "^6.1.0"
+	}
+}

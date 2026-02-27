@@ -1,0 +1,36 @@
+{
+	"name": "@kivora/svelte",
+	"version": "0.0.0",
+	"description": "Kivora UI components for Svelte",
+	"type": "module",
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js",
+			"require": "./dist/index.cjs"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "svelte-package",
+		"dev": "svelte-package --watch",
+		"type-check": "svelte-check --tsconfig ./tsconfig.json",
+		"clean": "rimraf dist"
+	},
+	"peerDependencies": {
+		"svelte": ">=5"
+	},
+	"devDependencies": {
+		"@kivora/core": "workspace:*",
+		"@sveltejs/package": "^2.3.7",
+		"rimraf": "^6.0.1",
+		"svelte": "^5.20.2",
+		"svelte-check": "^4.1.4",
+		"typescript": "^5.7.3"
+	}
+}

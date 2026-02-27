@@ -1,0 +1,22 @@
+﻿# Source & config  only dist/ is published (enforced by "files" in package.json)
+src/
+tsconfig*.json
+tsup.config.ts
+vite.config.ts
+svelte.config.*
+
+# Dev & test
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+__tests__/
+coverage/
+
+# Misc
+.turbo/
+node_modules/
+*.log
+*.tsbuildinfo
+.DS_Store
+*.tgz

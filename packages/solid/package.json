@@ -1,0 +1,37 @@
+{
+	"name": "@kivora/solid",
+	"version": "0.0.0",
+	"description": "Kivora UI components for SolidJS",
+	"type": "module",
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js",
+			"require": "./dist/index.cjs"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsup",
+		"dev": "tsup --watch",
+		"type-check": "tsc --noEmit",
+		"clean": "rimraf dist"
+	},
+	"peerDependencies": {
+		"solid-js": ">=1.8"
+	},
+	"devDependencies": {
+		"@kivora/core": "workspace:*",
+		"rimraf": "^6.0.1",
+		"solid-js": "^1.9.5",
+		"tsup": "^8.3.5",
+		"typescript": "^5.7.3",
+		"vite": "^6.1.0",
+		"vite-plugin-solid": "^2.10.2"
+	}
+}

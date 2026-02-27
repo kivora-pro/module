@@ -1,0 +1,37 @@
+{
+	"name": "kivora",
+	"private": true,
+	"version": "0.0.0",
+	"description": "Kivora — Multiframework UI library & utilities",
+	"scripts": {
+		"build": "turbo run build",
+		"dev": "turbo run dev --parallel",
+		"lint": "turbo run lint",
+		"type-check": "turbo run type-check",
+		"clean": "turbo run clean",
+		"demo:react": "pnpm --filter demo-react dev",
+		"demo:solid": "pnpm --filter demo-solid dev",
+		"demo:svelte": "pnpm --filter demo-svelte dev",
+		"changeset": "changeset",
+		"version-packages": "changeset version",
+		"release": "turbo run build && changeset publish",
+		"publish:core": "pnpm --filter @kivora/core publish --access public --no-git-checks",
+		"publish:react": "pnpm --filter @kivora/react publish --access public --no-git-checks",
+		"publish:react-native": "pnpm --filter @kivora/react-native publish --access public --no-git-checks",
+		"publish:solid": "pnpm --filter @kivora/solid publish --access public --no-git-checks",
+		"publish:svelte": "pnpm --filter @kivora/svelte publish --access public --no-git-checks",
+		"publish:vite": "pnpm --filter @kivora/vite publish --access public --no-git-checks",
+		"publish:all": "pnpm run publish:core && pnpm run publish:react && pnpm run publish:react-native && pnpm run publish:solid && pnpm run publish:svelte && pnpm run publish:vite"
+	},
+	"devDependencies": {
+		"@changesets/cli": "^2.27.1",
+		"turbo": "^2.3.3",
+		"typescript": "^5.7.3",
+		"tsup": "^8.3.5"
+	},
+	"engines": {
+		"node": ">=18",
+		"pnpm": ">=9"
+	},
+	"packageManager": "pnpm@9.15.4"
+}

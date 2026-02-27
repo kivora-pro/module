@@ -1,0 +1,87 @@
+/* @kivora/react – Estilos compilados con Tailwind CSS v4
+   Este archivo se compila durante el build y se distribuye como dist/styles.css
+   Los consumidores solo necesitan: import '@kivora/react/styles.css'
+*/
+
+@import 'tailwindcss';
+
+/* Swiper – estilos base + módulos usados por Carousel */
+@import 'swiper/css';
+@import 'swiper/css/pagination';
+@import 'swiper/css/autoplay';
+
+/* Carousel: forzar que Swiper llene el contenedor absoluto */
+.kivora-carousel-inner > .swiper {
+	height: 100%;
+	width: 100%;
+}
+
+/* Escanear todos los componentes de la librería */
+@source "./";
+
+/* ── Design tokens (modo claro por defecto) ─────────────── */
+@theme {
+	/* Brand */
+	--color-brand: #3b82f6;
+	--color-brand-50: #eff6ff;
+	--color-brand-100: #dbeafe;
+	--color-brand-200: #bfdbfe;
+	--color-brand-300: #93c5fd;
+	--color-brand-400: #60a5fa;
+	--color-brand-500: #3b82f6;
+	--color-brand-600: #2563eb;
+	--color-brand-700: #1d4ed8;
+	--color-brand-800: #1e40af;
+	--color-brand-900: #1e3a8a;
+
+	/* Surface
+	   surface         → fondo de página y contenedores base
+	   surface-elevated → tarjetas / modales / dropdowns que flotan sobre surface */
+	--color-surface: #ffffff;
+	--color-surface-elevated: #ffffff;
+	--color-on-surface: #0f172a;
+
+	/* Neutral */
+	--color-muted: #94a3b8;
+	--color-border: #e2e8f0;
+
+	/* Semantic */
+	--color-success: #22c55e;
+	--color-warning: #f59e0b;
+	--color-danger: #ef4444;
+	--color-danger-400: #f87171;
+	--color-danger-600: #dc2626;
+	--color-warning-400: #fbbf24;
+	--color-warning-600: #d97706;
+	--color-success-400: #4ade80;
+	--color-success-600: #16a34a;
+
+	/* Typography */
+	--font-sans: Inter, system-ui, -apple-system, sans-serif;
+}
+
+/* ── Dark mode ──────────────────────────────────────────── */
+/* Soporta AMBAS estrategias sin configuración extra del consumidor:
+   • Clase manual:  <html class="dark"> (toggle programático)
+   • Media query:   respeta preferencia del sistema operativo
+     – Para forzar modo claro en un sistema oscuro: <html class="light">        */
+
+/* Clase explícita – html.dark es más específico que :root ── */
+html.dark {
+	--color-surface: #0b1120;
+	--color-surface-elevated: #1e293b;
+	--color-on-surface: #f1f5f9;
+	--color-muted: #94a3b8;
+	--color-border: #334155;
+}
+
+/* Media query — sólo si no hay clase .light forzada ────── */
+@media (prefers-color-scheme: dark) {
+	html:not(.light) {
+		--color-surface: #0b1120;
+		--color-surface-elevated: #1e293b;
+		--color-on-surface: #f1f5f9;
+		--color-muted: #94a3b8;
+		--color-border: #334155;
+	}
+}
