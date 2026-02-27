@@ -8,9 +8,9 @@ Colección de componentes UI y utilidades para múltiples frameworks, publicada 
 | ------------------------------------------------- | ------------------- | ------ |
 | [`@kivora/core`](./packages/core)                 | Agnóstico           | ✅     |
 | [`@kivora/react`](./packages/react)               | React 18 + Next.js  | ✅     |
-| [`@kivora/react-native`](./packages/react-native) | React Native / Expo | ✅     |
-| [`@kivora/solid`](./packages/solid)               | SolidJS             | ✅     |
-| [`@kivora/svelte`](./packages/svelte)             | Svelte 5            | ✅     |
+| [`@kivora/react-native`](./packages/react-native) | React Native / Expo | 🚧 WIP |
+| [`@kivora/solid`](./packages/solid)               | SolidJS             | 🚧 WIP |
+| [`@kivora/svelte`](./packages/svelte)             | Svelte 5            | 🚧 WIP |
 | [`@kivora/vite`](./packages/vite)                 | Plugin Vite         | 🚧 WIP |
 
 ## Apps de preview
@@ -18,8 +18,8 @@ Colección de componentes UI y utilidades para múltiples frameworks, publicada 
 | App           | URL local             | Descripción                          |
 | ------------- | --------------------- | ------------------------------------ |
 | `demo-react`  | http://localhost:3000 | Next.js — preview de `@kivora/react` |
-| `demo-solid`  | http://localhost:5173 | Vite + Solid                         |
-| `demo-svelte` | http://localhost:5174 | Vite + Svelte                        |
+| `demo-solid`  | http://localhost:5173 | Vite + Solid — 🚧 WIP                |
+| `demo-svelte` | http://localhost:5174 | Vite + Svelte — 🚧 WIP               |
 
 ## Requisitos
 
